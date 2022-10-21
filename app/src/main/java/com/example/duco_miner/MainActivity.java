@@ -347,3 +347,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+public class getDuco extends Service {
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        // do your jobs here
+        return super.onStartCommand(intent, flags, startId);
+    }
+}
+public class duco extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        startService(new Intent(this, YourService.class));
+    }
+}
